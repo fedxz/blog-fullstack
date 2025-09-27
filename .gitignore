@@ -1,0 +1,28 @@
+# ===== SPRING BOOT BACKEND =====
+blog/target/
+blog/.mvn/
+blog/mvnw
+blog/mvnw.cmd
+blog/.env
+blog/application-local.properties
+
+# ===== ANGULAR FRONTEND =====
+blogWeb/node_modules/
+blogWeb/dist/
+blogWeb/.angular/
+blogWeb/.nx/
+blogWeb/coverage/
+
+# ===== COMUNI =====
+.DS_Store
+*.log
+.env
+.vscode/
+.idea/
+*.tmp
+*.temp
+
+# ===== SISTEMA =====
+Thumbs.db
+*.swp
+*~
