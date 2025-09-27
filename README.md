@@ -10,15 +10,5 @@ Progetto blog sviluppato con:
 
 
 
-\## 🚀 Come avviare il progetto
 
-
-
-\### Backend (Spring Boot)
-
-```bash
-
-cd blog
-
-./mvnw spring-boot:run
 
