@@ -1,13 +1,16 @@
-<mat-toolbar>
-  <button matIconButton class="example-icon" aria-label="Example icon-button with menu icon">
+<mat-toolbar color="primary">
+  <button mat-icon-button>
     <mat-icon>menu</mat-icon>
   </button>
-  <span>My App</span>
-  <span class="example-spacer"></span>
-  <button matIconButton class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
+  <span>Il Mio Blog</span>
+  <span class="spacer"></span>
+  <button mat-button>Home</button>
+   <button mat-raised-button 
+          color="accent" 
+          (click)="navigateToPost()"
+          class="create-post-btn">
+    <mat-icon>add</mat-icon>
+    Create Post
   </button>
-  <button matIconButton class="example-icon" aria-label="Example icon-button with share icon">
-    <mat-icon>share</mat-icon>
-  </button>
+  <button mat-button>Chi Sono</button>
 </mat-toolbar>

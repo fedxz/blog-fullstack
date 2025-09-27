@@ -1,0 +1,41 @@
+<div class="post-container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Crea Nuovo Post</mat-card-title>
+    </mat-card-header>
+    
+    <mat-card-content>
+      <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+        
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Nome</mat-label>
+          <input matInput formControlName="nome">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>IMG URL</mat-label>
+          <input matInput formControlName="img">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Created By</mat-label>
+          <input matInput formControlName="createdBy">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Tags</mat-label>
+          <input matInput formControlName="tags">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Contenuto</mat-label>
+          <textarea matInput formControlName="content" rows="8" placeholder="Scrivi il contenuto..."></textarea>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit" [disabled]="!postForm.valid">
+          Crea Post
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

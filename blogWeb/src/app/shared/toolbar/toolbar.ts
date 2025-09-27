@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-toolbar',
@@ -12,5 +14,9 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './toolbar.scss'
 })
 export class Toolbar {
-
+constructor(private router: Router) {
+}
+navigateToPost(){
+  this.router.navigate(['/post']);
+}
 }
