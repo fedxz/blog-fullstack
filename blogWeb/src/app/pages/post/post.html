@@ -22,9 +22,21 @@
           <input matInput formControlName="createdBy">
         </mat-form-field>
 
+
         <mat-form-field appearance="outline" class="full-width">
           <mat-label>Tags</mat-label>
-          <input matInput formControlName="tags">
+          <mat-chip-grid #chipGrid aria-label ="enter tags">
+
+            <mat-chip-row *ngFor="let tag of tags; let i = index" (removed)="remove(tag)">
+              {{tag}}
+              <button matChipRemove>
+                <mat-icon>cancel</mat-icon>
+              </button>
+            </mat-chip-row>
+            <input placeholder="New tag..."
+                   [matChipInputFor]="chipGrid"
+                   (matChipInputTokenEnd)="add($event)">
+          </mat-chip-grid>
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="full-width">
@@ -32,7 +44,7 @@
           <textarea matInput formControlName="content" rows="8" placeholder="Scrivi il contenuto..."></textarea>
         </mat-form-field>
 
-        <button mat-raised-button color="primary" type="submit" [disabled]="!postForm.valid">
+        <button mat-raised-button color="primary" type="submit" [disabled]="!postForm.valid" (click)="onSubmit()">
           Crea Post
         </button>
       </form>

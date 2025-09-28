@@ -16,7 +16,10 @@ import { Router } from '@angular/router';
 export class Toolbar {
 constructor(private router: Router) {
 }
-navigateToPost(){
-  this.router.navigate(['/post']);
+navigateToHome(): void {
+  window.location.href = '/'; 
+}  
+navigateToPost() : void {
+  this.router.navigate(['/create-post']);
 }
 }

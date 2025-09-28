@@ -1,10 +1,10 @@
-<mat-toolbar color="primary">
+<mat-toolbar >
   <button mat-icon-button>
     <mat-icon>menu</mat-icon>
   </button>
   <span>Il Mio Blog</span>
   <span class="spacer"></span>
-  <button mat-button>Home</button>
+  <button mat-button (click)="navigateToHome()">Home</button>
    <button mat-raised-button 
           color="accent" 
           (click)="navigateToPost()"
